@@ -405,7 +405,7 @@ class Cluster(object):
                  userdata_scripts=[],
                  refresh_interval=30,
                  disable_queue=False,
-                 num_threads=20,
+                 num_threads=100,
                  disable_threads=False,
                  cluster_group=None,
                  force_spot_master=False,
