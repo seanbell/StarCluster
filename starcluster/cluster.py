@@ -2250,8 +2250,7 @@ class ClusterValidator(validators.Validator):
                     'route.destination-cidr-block': static.WORLD_CIDRIP,
                     'route.gateway-id': gws[0].id})
                 if not rtables:
-                    raise exception.ClusterValidationError(
-                        "No route to %s found for subnet: %s" %
+                    log.warn("No route to %s found for subnet: %s" %
                         (static.WORLD_CIDRIP, self.cluster.subnet_id))
             else:
                 log.warn(user_msgs.public_ips_disabled %
